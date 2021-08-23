@@ -1,0 +1,5 @@
+package springboot.leonardo;
+
+public class Startup {
+
+}
