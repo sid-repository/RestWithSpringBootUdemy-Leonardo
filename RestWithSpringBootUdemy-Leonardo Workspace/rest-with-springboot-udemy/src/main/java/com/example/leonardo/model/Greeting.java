@@ -1,4 +1,4 @@
-package com.example.leonardo;
+package com.example.leonardo.model;
 
 public class Greeting {
 
