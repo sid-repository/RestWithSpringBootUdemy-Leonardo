@@ -1,8 +1,11 @@
 package com.example.leonardo.request.converters;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class NumberConverter {
 
-	public static Double convertToDouble(String strNumber) {
+	public Double convertToDouble(String strNumber) {
 		if (strNumber == null)
 			return 0D;
 		String number = strNumber.replaceAll(",", ".");
@@ -11,7 +14,7 @@ public class NumberConverter {
 		return 0D;
 	}
 
-	public static boolean isNumeric(String strNumber) {
+	public boolean isNumeric(String strNumber) {
 		if (strNumber == null)
 			return false;
 		String number = strNumber.replaceAll(",", ".");
