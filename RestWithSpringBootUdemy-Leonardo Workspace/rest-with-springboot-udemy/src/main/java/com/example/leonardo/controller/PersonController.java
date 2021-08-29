@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.leonardo.model.Person;
+import com.example.leonardo.data.valueObject.PersonVO;
 import com.example.leonardo.services.PersonServices;
 
 @RestController
@@ -25,22 +25,22 @@ public class PersonController {
 	PersonServices services;
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public Person findById(@PathVariable("id") Long id) {
+	public PersonVO findById(@PathVariable("id") Long id) {
 		return services.findById(id);
 	}
 
 	@GetMapping
-	public List<Person> findAll() {
+	public List<PersonVO> findAll() {
 		return services.findAll();
 	}
 
 	@PostMapping
-	public Person create(@RequestBody Person person) {
+	public PersonVO create(@RequestBody PersonVO person) {
 		return services.create(person);
 	}
 
 	@PutMapping
-	public Person update(@RequestBody Person person) {
+	public PersonVO update(@RequestBody PersonVO person) {
 		return services.update(person);
 	}
 

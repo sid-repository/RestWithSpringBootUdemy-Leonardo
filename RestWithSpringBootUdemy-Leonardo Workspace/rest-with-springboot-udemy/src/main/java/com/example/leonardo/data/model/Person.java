@@ -1,4 +1,4 @@
-package com.example.leonardo.model;
+package com.example.leonardo.data.model;
 
 import java.io.Serializable;
 
